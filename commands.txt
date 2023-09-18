@@ -1,0 +1,36 @@
+
+######### commands to execute testcases ###################
+
+# Run tests in a module
+pytest test_mod.py
+
+#Run tests in a package/directory
+pytest testing/
+
+#Run tests by keyword expression
+pytest -k TestMyClass.test_method_simple
+
+#Run tests by collection arguments
+pytest tests/test_mod.py::test_func
+
+# To run all tests in a class (if module have mulitiple classes)
+pytest tests/test_mod.py::TestClass
+
+# Specifing a specific test method
+pytest tests/test_mod.py::TestClass::test_func
+
+# Specifing a specific parameterized of a test:
+pytest tests/test_mod.py::TestClass:test_method(x1,y1)
+
+
+# Run tests by marker expressions
+pytest -m slow # Will run all tests which are decorated with the @pytest.mark.slow decorator
+
+#Run tests from packages
+pytest --pyargs pkg.testing
+
+
+
+
+
+pytest --fixtures #shows builtin and custom fixtures

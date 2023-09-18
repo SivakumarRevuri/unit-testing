@@ -24,3 +24,4 @@ class TestClass:
     def test_one(self):
         assert 'h' in 'this'
         # assert hasattr('e', 'check')
+
